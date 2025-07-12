@@ -37,34 +37,37 @@ function TaskBoard({ filter }) {
   });
 
   return (
-    <div className="container-fluid p-4 bg-light w-100 h-100">
+    <div className="container-fluid p-4 bg-light h-100">
       <div className="row align-items-center mb-3">
-        <div className="col-md-4">
-          <input type="text" placeholder="Search task" className="search-bar" />
+        <div className="col-md-6 col-sm-12">
+          <input
+            type="text"
+            placeholder="Search task"
+            className="search-bar w-100"
+          />
         </div>
-        <div className="col-md-2 text-center text-muted">
+        <div className="col-md-3 col-sm-6 text-center text-muted">
           {new Date().toLocaleDateString("en-US", {
             year: "numeric",
             month: "short",
             day: "numeric",
           })}
         </div>
-        <div className="col-md-3 text-end">
+        <div className="col-md-3 col-sm-6 text-end">
           <button className="addtask-btn btn">Add new task</button>
         </div>
-        <div className="col-md-3"></div>
       </div>
 
       <div className="row align-items-center mb-2">
-        <div className="col-md-6">
+        <div className="col-md-6 col-sm-12">
           <h5 className="mb-0">All tasks ({tasks.length} tasks)</h5>
         </div>
       </div>
 
       <div className="row align-items-center mb-4 mt-3">
-        <div className="col-md-4 d-flex justify-content-start">
+        <div className="col-md-4 col-sm-12 d-flex justify-content-start">
           <div className="icons-group">
-            <button className="btn ">
+            <button className="btn">
               <i className="bi bi-list"></i>
             </button>
             <button className="btn grid-icon">
@@ -72,8 +75,8 @@ function TaskBoard({ filter }) {
             </button>
           </div>
         </div>
-        <div className="col-md-4"></div>
-        <div className="col-md-2 text-end">
+        <div className="col-md-4 col-sm-12"></div>
+        <div className="col-md-2 col-sm-12 text-end">
           <select className="form-select w-auto dropdown-sortby">
             <option>Sort by</option>
             <option>Order added</option>
@@ -83,12 +86,12 @@ function TaskBoard({ filter }) {
             <option>UnCompleted first</option>
           </select>
         </div>
-        <div className="col-md-3"></div>
+        <div className="col-md-3 col-sm-12"></div>
       </div>
 
-      <div className="row">
+      <div className="row row-cols-1 row-cols-md-3 g-4">
         {tasks.map((task, index) => (
-          <div className="col-md-3 mb-4 mt-5" key={task.id}>
+          <div key={task.id}>
             <TaskCard task={task} isFirst={index === 0} />
           </div>
         ))}

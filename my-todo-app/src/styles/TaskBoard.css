@@ -19,3 +19,78 @@
   border: none !important;
   padding: 15px;
 }
+.task-board {
+  padding: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.addtask-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.icons-group button {
+  margin-right: 10px;
+}
+
+.dropdown-sortby {
+  width: 150px;
+}
+
+.task-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.task-card.first-task {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+.task-footer {
+  padding: 10px;
+}
+
+.dashed-line {
+  border-top: 1px dashed #ddd;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.icon-img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.icon-img:hover {
+  filter: grayscale(0%);
+}
+
+.white-icon {
+  filter: invert(100%);
+}

@@ -15,7 +15,7 @@ function TaskCard({ task, isFirst }) {
   return (
     <div className="position-relative">
       <span
-        className="badge  position-absolute task-label"
+        className="badge position-absolute task-label"
         style={{
           top: "-32px",
           right: "10px",

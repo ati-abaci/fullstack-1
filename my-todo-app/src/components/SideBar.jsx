@@ -1,40 +1,56 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/SideBar.css";
-import { useState } from "react";
 
 function SideBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div>
-      <button className="hamburger-btn" onClick={toggleSidebar}>
-        ☰
+    <>
+      <button
+        className="hamburger-btn btn  d-md-none"
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-label="Toggle sidebar"
+      >
+        <i className="bi bi-list"></i>
       </button>
+
       <div
         className={`sidebar bg-light border-end p-3 d-flex flex-column ${
-          isOpen ? "open" : "closed"
+          isOpen ? "sidebar-open" : ""
         }`}
-        style={{ width: "250px" }}
       >
         <h5 className="sidebar-title">TO-DO LIST</h5>
         <button className="add-task-btn d-block btn-primary mb-4 w-100">
           + Add new task
         </button>
         <div className="sidebar-categories flex-column">
-          <Link to="/" className="sidebar-link">
+          <Link
+            to="/"
+            className="sidebar-link"
+            onClick={() => setIsOpen(false)}
+          >
             All tasks
           </Link>
-          <Link to="/important" className="sidebar-link">
+          <Link
+            to="/important"
+            className="sidebar-link"
+            onClick={() => setIsOpen(false)}
+          >
             Important tasks
           </Link>
-          <Link to="/completed" className="sidebar-link">
+          <Link
+            to="/completed"
+            className="sidebar-link"
+            onClick={() => setIsOpen(false)}
+          >
             Completed tasks
           </Link>
-          <Link to="/uncompleted" className="sidebar-link">
+          <Link
+            to="/uncompleted"
+            className="sidebar-link"
+            onClick={() => setIsOpen(false)}
+          >
             Uncompleted tasks
           </Link>
         </div>
@@ -47,6 +63,7 @@ function SideBar() {
           >
             Directories
           </button>
+
           <ul className="dropdown-menu w-100">
             <li>
               <div className="directory-item">
@@ -72,7 +89,13 @@ function SideBar() {
           </ul>
         </div>
       </div>
-    </div>
+      {isOpen && (
+        <div
+          className="sidebar-backdrop"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
+    </>
   );
 }
 
