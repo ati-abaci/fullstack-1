@@ -1,0 +1,56 @@
+.task-card {
+  transition: box-shadow 0.2s ease;
+  border-radius: 8px;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task-card.first-task {
+  background-color: #6d3ae0;
+  color: white !important;
+}
+
+.card-body {
+  height: 250px;
+}
+
+.task-card {
+  background-color: #fff;
+  border-radius: 12px;
+  transition: 0.2s all ease;
+}
+
+.first-task {
+  background-color: #6d3ae0 !important;
+  color: white !important;
+}
+
+.first-task .card-title,
+.first-task .card-text,
+.first-task small,
+.first-task .task-label {
+  color: white !important;
+}
+
+.dashed-line {
+  border-top: 2px dashed #ccc;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.task-label {
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.white-icon {
+  filter: brightness(0) invert(1);
+}
+
+.dark-icon {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(5%) saturate(819%)
+    hue-rotate(169deg) brightness(97%) contrast(87%);
+}

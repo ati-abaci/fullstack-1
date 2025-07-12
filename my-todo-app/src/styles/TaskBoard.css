@@ -1,0 +1,21 @@
+.search-bar {
+  border: none;
+  padding: 15px;
+  padding-right: 150px;
+  border-radius: 10px;
+}
+
+.addtask-btn {
+  border: none;
+  background-color: #6d3ae0 !important;
+  color: #fff !important;
+}
+
+.grid-icon {
+  color: #6d3ae0 !important;
+}
+
+.dropdown-sortby {
+  border: none !important;
+  padding: 15px;
+}
